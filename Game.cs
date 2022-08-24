@@ -18,7 +18,20 @@ namespace SnakeAndLadder
         }
         public void Play()
         {
-
+            int op=random.Next(0, 3);
+            switch(op)
+            {
+                case NO_PLAY:
+                    playerPosition += 0;
+                    break;                  
+                case LADDER: 
+                    playerPosition += DieRoll();
+                    break;
+                case SNAKE:
+                    playerPosition -= DieRoll();
+                    break;
+            }
+            Console.WriteLine(playerPosition);
         }
     }
 }
