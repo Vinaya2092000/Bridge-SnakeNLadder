@@ -13,8 +13,7 @@ namespace SnakeAndLadder
         Random random = new Random();
         public int DieRoll()
         {
-            int dieCount = random.Next(1, 7);
-            return dieCount;
+            return 0;
         }
         public void Play()
         {
